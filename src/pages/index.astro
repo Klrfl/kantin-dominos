@@ -1,16 +1,20 @@
 ---
-const title = "Kantin Dominos - SMK Metland"
+import BaseLayout from "../layouts/BaseLayout.astro";
+const title = "Kantin Dominos - SMK Metland";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={title}>
+  <section class="main-section" id="hero">
+    <h1>Kantin dominos</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio sit
+      itaque obcaecati est aut? Dolor delectus blanditiis porro nam tempore,
+      quas consequatur voluptatum eveniet, voluptatem, odit ex quibusdam enim
+      repudiandae!
+    </p>
+  </section>
+  <section class="main-section">
+    <h2>Menu</h2>
+    <p>Menu akan segera datang</p>
+  </section>
+</BaseLayout>
