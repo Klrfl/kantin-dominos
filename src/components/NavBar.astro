@@ -1,5 +1,17 @@
 <nav>
-  <ul>
+  <div class="logo">
+    <a href="#">
+      <span>ceritanya logo</span>
+    </a>
+  </div>
+
+  <button id="open-nav"> open nav</button>
+
+  <ul class="nav__links">
+    <li class="nav__header">
+      <div class="logo"><a href="#"><span>ceritanya logo</span></a></div>
+      <button id="close-nav">close nav</button>
+    </li>
     <li><a href="#">Beranda</a></li>
     <li><a href="#">Menu</a></li>
     <li><a href="#">Tentang Kami</a></li>
@@ -10,7 +22,13 @@
 <style>
   nav {
     background: dodgerblue;
+    color: #ddd;
+
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
   }
 
   nav a {
@@ -24,11 +42,49 @@
     backdrop-filter: invert(0.2);
   }
 
-  nav ul {
+  .nav__links {
     margin: 0;
     padding: 0;
     list-style: none;
 
+    background: inherit;
+
     display: flex;
   }
+
+  #open-nav,
+  .nav__header {
+    display: none;
+  }
+
+  @media screen and (max-width: 50em) {
+    #open-nav,
+    .nav__header {
+      display: block;
+    }
+
+    .nav__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav__links {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      translate: 0 -100%;
+      transition: translate 200ms ease;
+
+      flex-direction: column;
+    }
+
+    .nav__links.active {
+      translate: 0;
+    }
+  }
 </style>
+
+<script>
+  import "../lib/nav.js";
+</script>
