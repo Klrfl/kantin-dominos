@@ -5,16 +5,35 @@ const title = "Kantin Dominos - SMK Metland";
 
 <BaseLayout title={title}>
   <section class="main-section" id="hero">
-    <h1>Kantin dominos</h1>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio sit
-      itaque obcaecati est aut? Dolor delectus blanditiis porro nam tempore,
-      quas consequatur voluptatum eveniet, voluptatem, odit ex quibusdam enim
-      repudiandae!
-    </p>
+    <div class="main-section__text">
+      <h1>Kantin dominos</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio sit
+        itaque obcaecati est aut? Dolor delectus blanditiis porro nam tempore,
+        quas consequatur voluptatum eveniet, voluptatem, odit ex quibusdam enim
+        repudiandae!
+      </p>
+    </div>
+    <div class="main-section__content">
+      <button>LIhat selengkapnya</button>
+    </div>
   </section>
+
   <section class="main-section">
     <h2>Menu</h2>
     <p>Menu akan segera datang</p>
   </section>
 </BaseLayout>
+
+<style>
+  .main-section {
+    padding: 5rem;
+  }
+
+  #hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
