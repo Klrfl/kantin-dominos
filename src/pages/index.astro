@@ -38,6 +38,27 @@ const semuaMinuman = await getCollection("minuman");
       {semuaMinuman.map((minuman) => <MenuItem menuItem={minuman} />)}
     </ul>
   </section>
+
+  <section class="main-section">
+    <h2>Tentang kami</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eum quidem
+      fugit voluptatum totam? Non beatae, cum molestias, accusamus, blanditiis
+      nisi cumque velit perspiciatis dicta provident modi impedit saepe ea?
+    </p>
+    <CTA isLink={true} href="/tentang-kami">lihat selengkapnya</CTA>
+  </section>
+
+  <section class="main-section">
+    <h2>Kontak</h2>
+    <p>ayo ke smk metland</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias, quos
+      maxime mollitia porro, aspernatur quibusdam quas eos praesentium harum
+      ipsum odit officia culpa. Eveniet natus magnam dignissimos nihil
+      accusamus!
+    </p>
+  </section>
 </BaseLayout>
 
 <style>
