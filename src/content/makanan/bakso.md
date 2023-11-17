@@ -1,0 +1,7 @@
+---
+nama: "bakso"
+harga: "7.000"
+gambar:
+  src: "./"
+  alt: "gambar bakso"
+---
