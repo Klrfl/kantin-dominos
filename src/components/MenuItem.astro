@@ -1,0 +1,18 @@
+---
+const { menuItem } = Astro.props;
+const frontmatter = menuItem.data;
+---
+
+<li class="menu-item">
+  <article>
+    <p>{frontmatter.nama}</p>
+    <p>{frontmatter.harga}</p>
+  </article>
+</li>
+
+<style>
+  .menu-item {
+    padding: 2rem;
+    outline: 2px solid black;
+  }
+</style>

@@ -1,6 +1,11 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import MenuItem from "../components/MenuItem.astro";
 const title = "Kantin Dominos - SMK Metland";
+
+const semuaMakanan = await getCollection("makanan");
+const semuaMinuman = await getCollection("minuman");
 ---
 
 <BaseLayout title={title}>
@@ -22,6 +27,15 @@ const title = "Kantin Dominos - SMK Metland";
   <section class="main-section">
     <h2>Menu</h2>
     <p>Menu akan segera datang</p>
+    <h3>Makanan</h3>
+    <ul class="menu-list">
+      {semuaMakanan.map((makanan) => <MenuItem menuItem={makanan} />)}
+    </ul>
+
+    <h3>Minuman</h3>
+    <ul class="menu-list">
+      {semuaMinuman.map((minuman) => <MenuItem menuItem={minuman} />)}
+    </ul>
   </section>
 </BaseLayout>
 
@@ -35,5 +49,21 @@ const title = "Kantin Dominos - SMK Metland";
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 30ch), 1fr));
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: 50em) {
+    .main-section {
+      padding: 2rem;
+    }
   }
 </style>

@@ -4,8 +4,8 @@ const makananCollection = defineCollection({
   schema: z.object({
     nama: z.string(),
     harga: z.string(),
-    image: z.object({
-      url: z.string(),
+    gambar: z.object({
+      src: z.string(),
       alt: z.string(),
     }),
   }),
@@ -16,8 +16,8 @@ const minumanCollection = defineCollection({
   schema: z.object({
     nama: z.string(),
     harga: z.string(),
-    image: z.object({
-      url: z.string(),
+    gambar: z.object({
+      src: z.string(),
       alt: z.string(),
     }),
   }),

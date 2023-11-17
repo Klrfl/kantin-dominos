@@ -1,7 +1,7 @@
 ---
 nama: "APa kek"
 harga: "30.000"
-image:
+gambar:
   src: "./"
   alt: "sebuah minuman"
 ---

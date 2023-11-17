@@ -1,7 +1,7 @@
 ---
 nama: "Contoh makanan"
 harga: "20.000"
-image:
+gambar:
   src: "./"
   alt: "sebuah contoh makanan"
 ---
