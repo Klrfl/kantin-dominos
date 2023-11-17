@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
 import MenuItem from "../components/MenuItem.astro";
 const title = "Kantin Dominos - SMK Metland";
 
@@ -20,7 +21,7 @@ const semuaMinuman = await getCollection("minuman");
       </p>
     </div>
     <div class="main-section__content">
-      <button>LIhat selengkapnya</button>
+      <CTA isLink={true} href="#menu">Lihat selengkapnya</CTA>
     </div>
   </section>
 

@@ -1,6 +1,8 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+
 import "../styles/main.css";
 const { title, description = "Kantin Dominos SMK Metland" } = Astro.props;
 ---
@@ -15,5 +17,6 @@ const { title, description = "Kantin Dominos SMK Metland" } = Astro.props;
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

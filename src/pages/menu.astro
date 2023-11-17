@@ -1,9 +1,28 @@
 ---
-const { menuItem } = Astro.props;
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MenuItem from "../components/MenuItem.astro";
+
+const semuaMakanan = await getCollection("makanan");
+const semuaMinuman = await getCollection("minuman");
 ---
 
-<div>
+<BaseLayout>
+  <h1>Menu kami</h1>
   <p>
-    {menuItem}
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam
+    repellat nemo tempora quisquam, omnis dolorem maiores mollitia, unde
+    explicabo saepe iure. Repellat, fuga? Quam, veritatis ab. Nesciunt, sapiente
+    temporibus.
   </p>
-</div>
+
+  <h2>Makanan</h2>
+  <ul>
+    {semuaMakanan.map((makanan) => <MenuItem menuItem={makanan} />)}
+  </ul>
+
+  <h2>Minuman</h2>
+  <ul>
+    {semuaMinuman.map((minuman) => <MenuItem menuItem={minuman} />)}
+  </ul>
+</BaseLayout>
