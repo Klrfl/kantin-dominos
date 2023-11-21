@@ -5,8 +5,9 @@ const commonSchema = z.object({
   harga: z.string(),
   gambar: z.object({
     src: z.string(),
-    alt: z.string(),
+    alt: z.string().optional(),
   }),
+  rekomendasi: z.boolean().optional()
 })
 
 const makananCollection = defineCollection({
