@@ -29,7 +29,7 @@ const menuRekomendasi = [
     </div>
   </section>
 
-  <section class="main-section">
+  <section class="main-section" id="rekomendasi">
     <div class="main-section__text">
       <h2>Menu rekomendasi kami</h2>
       <p>Menu akan segera datang</p>
@@ -44,7 +44,7 @@ const menuRekomendasi = [
     </div>
   </section>
 
-  <section class="main-section">
+  <section class="main-section" id="tentang-kami">
     <div class="main-section__text">
       <h2>Tentang kami</h2>
       <p>
@@ -56,7 +56,7 @@ const menuRekomendasi = [
     </div>
   </section>
 
-  <section class="main-section">
+  <section class="main-section" id="kontak">
     <div class="main-section__text">
       <h2>Kontak</h2>
       <p>ayo ke kantin dominos di SMK Metland</p>
@@ -71,10 +71,22 @@ const menuRekomendasi = [
 </BaseLayout>
 
 <style>
+  .main-section {
+    min-height: 40vh;
+  }
+
   #hero {
+    min-height: 70vh;
+    background: var(--white-200);
     text-align: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+  }
+
+  #tentang-kami {
+    background: var(--white-200);
   }
 </style>

@@ -17,16 +17,13 @@ const { title, description = "Kantin Dominos SMK Metland" } = Astro.props;
     </main>
     <Footer />
     <style is:global>
-      main {
-        padding: 2rem;
-      }
-
-      .main-section {
-        padding: 2rem 0;
-      }
-
       .main-section__text {
         max-width: 75ch;
+      }
+
+      .main-section__text,
+      .main-section__content {
+        padding: 2rem;
       }
 
       @media screen and (max-width: 50em) {
