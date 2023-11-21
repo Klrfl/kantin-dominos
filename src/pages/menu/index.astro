@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import MenuItem from "../components/MenuItem.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MenuItem from "../../components/MenuItem.astro";
 
 const semuaMakanan = await getCollection("makanan");
 const semuaMinuman = await getCollection("minuman");
@@ -17,12 +17,12 @@ const semuaMinuman = await getCollection("minuman");
   </p>
 
   <h2>Makanan</h2>
-  <ul>
+  <ul class="menu-list">
     {semuaMakanan.map((makanan) => <MenuItem menuItem={makanan} />)}
   </ul>
 
   <h2>Minuman</h2>
-  <ul>
+  <ul class="menu-list">
     {semuaMinuman.map((minuman) => <MenuItem menuItem={minuman} />)}
   </ul>
 </BaseLayout>

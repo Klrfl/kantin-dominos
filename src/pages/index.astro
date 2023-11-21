@@ -7,6 +7,10 @@ const title = "Kantin Dominos - SMK Metland";
 
 const semuaMakanan = await getCollection("makanan");
 const semuaMinuman = await getCollection("minuman");
+const menuRekomendasi = [
+  semuaMakanan.filter((makanan) => makanan.data.rekomendasi),
+  semuaMinuman.filter((minuman) => minuman.data.rekomendasi),
+].flat();
 ---
 
 <BaseLayout title={title}>
@@ -26,66 +30,51 @@ const semuaMinuman = await getCollection("minuman");
   </section>
 
   <section class="main-section">
-    <h2>Menu</h2>
-    <p>Menu akan segera datang</p>
-    <h3>Makanan</h3>
-    <ul class="menu-list">
-      {semuaMakanan.map((makanan) => <MenuItem menuItem={makanan} />)}
-    </ul>
+    <div class="main-section__text">
+      <h2>Menu rekomendasi kami</h2>
+      <p>Menu akan segera datang</p>
+    </div>
 
-    <h3>Minuman</h3>
-    <ul class="menu-list">
-      {semuaMinuman.map((minuman) => <MenuItem menuItem={minuman} />)}
-    </ul>
+    <div class="main-section__content">
+      <ul class="menu-list">
+        {menuRekomendasi.map((menuItem) => <MenuItem menuItem={menuItem} />)}
+      </ul>
+
+      <CTA isLink={true} href="/menu">lihat selengkapnya</CTA>
+    </div>
   </section>
 
   <section class="main-section">
-    <h2>Tentang kami</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eum quidem
-      fugit voluptatum totam? Non beatae, cum molestias, accusamus, blanditiis
-      nisi cumque velit perspiciatis dicta provident modi impedit saepe ea?
-    </p>
-    <CTA isLink={true} href="/tentang-kami">lihat selengkapnya</CTA>
+    <div class="main-section__text">
+      <h2>Tentang kami</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eum quidem
+        fugit voluptatum totam? Non beatae, cum molestias, accusamus, blanditiis
+        nisi cumque velit perspiciatis dicta provident modi impedit saepe ea?
+      </p>
+      <CTA isLink={true} href="/tentang-kami">lihat selengkapnya</CTA>
+    </div>
   </section>
 
   <section class="main-section">
-    <h2>Kontak</h2>
-    <p>ayo ke smk metland</p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias, quos
-      maxime mollitia porro, aspernatur quibusdam quas eos praesentium harum
-      ipsum odit officia culpa. Eveniet natus magnam dignissimos nihil
-      accusamus!
-    </p>
+    <div class="main-section__text">
+      <h2>Kontak</h2>
+      <p>ayo ke kantin dominos di SMK Metland</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias,
+        quos maxime mollitia porro, aspernatur quibusdam quas eos praesentium
+        harum ipsum odit officia culpa. Eveniet natus magnam dignissimos nihil
+        accusamus!
+      </p>
+    </div>
   </section>
 </BaseLayout>
 
 <style>
-  .main-section {
-    padding: 5rem;
-  }
-
   #hero {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 30ch), 1fr));
-    gap: 1rem;
-  }
-
-  @media screen and (max-width: 50em) {
-    .main-section {
-      padding: 2rem;
-    }
   }
 </style>

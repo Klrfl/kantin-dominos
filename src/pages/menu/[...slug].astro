@@ -1,0 +1,24 @@
+---
+import MenuLayout from "../../layouts/MenuLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const semuaMakanan = await getCollection("makanan");
+  const semuaMinuman = await getCollection("minuman");
+  const semuaMenu = [semuaMakanan, semuaMinuman].flat();
+
+  return semuaMenu.map((menu) => ({
+    params: {
+      slug: menu.slug,
+    },
+    props: { menu },
+  }));
+}
+
+const { menu } = Astro.props;
+const { Content } = await menu.render();
+---
+
+<MenuLayout frontmatter={menu.data}>
+  <Content />
+</MenuLayout>
