@@ -8,5 +8,68 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h1>Kontak</h1>
       <p>Kami beroperasi dalam SMK Metland udah gitu aja</p>
     </div>
+    <div class="main-section__content">
+      <ul>
+        <li>
+          <a href="#">Facebook</a>
+        </li>
+        <li>
+          <a href="#">Instagram</a>
+        </li>
+      </ul>
+    </div>
   </section>
+
+  <div class="main-section" id="form-section">
+    <div class="main-section__text">
+      <h2>Form</h2>
+      <p>
+        anda juga dapat mengirim pesan lewat form ini. Kami akan membalas anda
+        sesegera mungkin
+      </p>
+    </div>
+    <div class="main-section__content">
+      <form action="" data-netlify="true" class="contact-form">
+        <label for="nama">Nama</label>
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          placeholder="Andi Johandi"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="andi17@johan.id"
+          required
+        />
+        <label for="pesan">Pesan</label>
+        <textarea
+          name="pesan"
+          id="pesan"
+          cols="30"
+          rows="10"
+          placeholder="Mau ga jadi restoran full gitu biar ga di SMK Metland terus"
+          required></textarea>
+      </form>
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+  #form-section {
+    background: var(--white-200);
+  }
+
+  .contact-form {
+    max-width: 120ch;
+    margin-inline: auto;
+  }
+
+  .contact-form :is(input, textarea) {
+    padding: 0.5rem 1rem;
+  }
+</style>

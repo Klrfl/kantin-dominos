@@ -26,6 +26,19 @@ h6 {
   margin-block: 0 1.7rem;
 }
 
+label,
+input {
+  display: block;
+}
+
+label {
+  padding-block: 1rem 0.5rem;
+}
+
+input {
+  width: 100%;
+}
+
 .menu-list {
   list-style: none;
   padding: 0;
