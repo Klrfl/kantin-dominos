@@ -1,41 +1,37 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+:root {
+  --black: #161718;
+  --white-100: #eaeaec;
+  --white-200: #eeeef7;
+
+  --text: var(--black);
+  --background: var(--white-100);
+
+  --primary: #85afe4;
+  --secondary: #cddaea;
+  --accent: #6b6f76;
 }
 
-* {
-  margin: 0;
+h1 {
+  margin-block: 1.1rem;
 }
 
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
 h2,
-h3,
+h3 {
+  margin-block: 1.3rem;
+}
+
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+  margin-block: 0 1.7rem;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 30ch), 1fr));
+  gap: 1rem;
 }
