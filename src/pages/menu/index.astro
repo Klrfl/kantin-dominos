@@ -8,21 +8,29 @@ const semuaMinuman = await getCollection("minuman");
 ---
 
 <BaseLayout>
-  <h1>Menu kami</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nam
-    repellat nemo tempora quisquam, omnis dolorem maiores mollitia, unde
-    explicabo saepe iure. Repellat, fuga? Quam, veritatis ab. Nesciunt, sapiente
-    temporibus.
-  </p>
+  <section class="main-section">
+    <div class="main-section__text">
+      <h1>Menu kami</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
+        nam repellat nemo tempora quisquam, omnis dolorem maiores mollitia, unde
+        explicabo saepe iure. Repellat, fuga? Quam, veritatis ab. Nesciunt,
+        sapiente temporibus.
+      </p>
+    </div>
+  </section>
 
-  <h2>Makanan</h2>
-  <ul class="menu-list">
-    {semuaMakanan.map((makanan) => <MenuItem menuItem={makanan} />)}
-  </ul>
+  <section class="main-section">
+    <div class="main-section__content">
+      <h2>Makanan</h2>
+      <ul class="menu-list">
+        {semuaMakanan.map((makanan) => <MenuItem menuItem={makanan} />)}
+      </ul>
 
-  <h2>Minuman</h2>
-  <ul class="menu-list">
-    {semuaMinuman.map((minuman) => <MenuItem menuItem={minuman} />)}
-  </ul>
+      <h2>Minuman</h2>
+      <ul class="menu-list">
+        {semuaMinuman.map((minuman) => <MenuItem menuItem={minuman} />)}
+      </ul>
+    </div>
+  </section>
 </BaseLayout>
