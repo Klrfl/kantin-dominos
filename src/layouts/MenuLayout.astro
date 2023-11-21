@@ -1,0 +1,32 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout>
+  <a href="/menu">Kembali</a>
+
+  <div class="menu-wrapper">
+    <img
+      class="menu-image"
+      src={frontmatter.gambar.src}
+      alt={frontmatter.gambar.alt}
+      height="300"
+      width="300"
+    />
+    <article>
+      <h1>{frontmatter.nama}</h1>
+      <p>{frontmatter.harga}</p>
+
+      <slot />
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .menu-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+</style>
