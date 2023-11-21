@@ -20,12 +20,13 @@ const { isLink, href } = Astro.props;
     outline: 2px solid var(--accent, black);
     padding: 0.5rem 1rem;
     margin-block: 0.5rem;
+    transition: background-color 200ms ease;
   }
 
   .cta:hover {
     outline: none;
-    background: var(--black);
-    color: var(--white);
+    background: var(--text);
+    color: var(--background);
   }
 
   a.cta {
