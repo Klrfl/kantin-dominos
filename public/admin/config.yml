@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_workflow: editorial_workflow
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "makanan"
+    label: "Makanan"
+    identifier_field: "makanan"
+    folder: "src/content/makanan"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama makanan", name: "nama", widget: "string" }
+      - { label: "Harga", name: "harga", widget: "string" }
+      - {
+          label: "Gambar",
+          name: "gambar",
+          widget: "object",
+          fields:
+            [
+              { label: "Lokasi gambar", name: "src", widget: "image" },
+              {
+                label: "Teks alt gambar",
+                name: "alt",
+                widget: "string",
+                required: false,
+              },
+            ],
+        }
+      - {
+          label: "Rekomendasi",
+          name: "rekomendasi",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "minuman"
+    label: "Minuman"
+    identifier_field: "minuman"
+    folder: "src/content/minuman"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama makanan", name: "nama", widget: "string" }
+      - { label: "Harga", name: "harga", widget: "string" }
+      - {
+          label: "Gambar",
+          name: "gambar",
+          widget: "number",
+          fields:
+            [
+              { label: "Gambar", name: "src", widget: "image" },
+              {
+                label: "Teks alt gambar",
+                name: "alt",
+                widget: "string",
+                required: false,
+              },
+            ],
+        }
+      - {
+          label: "Rekomendasi",
+          name: "rekomendasi",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
