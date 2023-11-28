@@ -8,14 +8,19 @@ const { title, description = "Kantin Dominos SMK Metland" } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead {title} {description} />
+    <slot name="header-script" />
   </head>
 
   <body>
     <NavBar />
+
     <main>
       <slot />
     </main>
+
     <Footer />
+    <slot name="script" />
+
     <style is:global>
       .main-section__text {
         max-width: 75ch;

@@ -14,6 +14,9 @@ const menuRekomendasi = [
 ---
 
 <BaseLayout title={title}>
+  <script
+    src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    slot="header-script"></script>
   <section class="main-section" id="hero">
     <div class="main-section__text">
       <h1>Kantin dominos</h1>
@@ -69,7 +72,7 @@ const menuRekomendasi = [
     </div>
   </section>
 
-  <script>
+  <script slot="script">
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", (user) => {
         if (!user) {
