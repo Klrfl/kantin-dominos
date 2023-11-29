@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: main
   repo: "klrfl/kantin-dominos"
+  branch: main
 
-publish_workflow: editorial_workflow
+publish_mode: editorial_workflow
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
 
