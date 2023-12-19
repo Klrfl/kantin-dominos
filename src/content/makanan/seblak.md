@@ -1,5 +1,5 @@
 ---
-nama: "seblak"
+title: "seblak"
 harga: "7.000"
 gambar:
   src: "./"

@@ -1,5 +1,5 @@
 ---
-nama: "mi godok"
+title: "mi godok"
 harga: "10.000"
 gambar:
   src: "./"

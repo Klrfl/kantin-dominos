@@ -15,7 +15,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Nama makanan", name: "nama", widget: "string" }
+      - { label: "Nama makanan", name: "title", widget: "string" }
       - { label: "Harga", name: "harga", widget: "string" }
       - {
           label: "Gambar",
@@ -23,7 +23,12 @@ collections:
           widget: "object",
           fields:
             [
-              { label: "Lokasi gambar", name: "src", widget: "image" },
+              {
+                label: "Lokasi gambar",
+                name: "src",
+                widget: "image",
+                required: false,
+              },
               {
                 label: "Teks alt gambar",
                 name: "alt",
@@ -55,7 +60,12 @@ collections:
           widget: "number",
           fields:
             [
-              { label: "Gambar", name: "src", widget: "image" },
+              {
+                label: "Gambar",
+                name: "src",
+                widget: "image",
+                required: false,
+              },
               {
                 label: "Teks alt gambar",
                 name: "alt",

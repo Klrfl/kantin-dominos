@@ -1,5 +1,5 @@
 ---
-nama: "bakso"
+title: "bakso"
 harga: "7.000"
 gambar:
   src: "./"

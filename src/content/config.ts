@@ -1,23 +1,23 @@
 import { z, defineCollection } from "astro:content";
 
 const commonSchema = z.object({
-  nama: z.string(),
+  title: z.string(),
   harga: z.string(),
   gambar: z.object({
-    src: z.string(),
+    src: z.string().optional(),
     alt: z.string().optional(),
   }),
-  rekomendasi: z.boolean().optional()
-})
+  rekomendasi: z.boolean().optional(),
+});
 
 const makananCollection = defineCollection({
   type: "content",
-  schema: commonSchema
+  schema: commonSchema,
 });
 
 const minumanCollection = defineCollection({
   type: "content",
-  schema: commonSchema
+  schema: commonSchema,
 });
 
 export const collections = {
