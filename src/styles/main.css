@@ -39,6 +39,10 @@ input {
   width: 100%;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .menu-list {
   list-style: none;
   padding: 0;
