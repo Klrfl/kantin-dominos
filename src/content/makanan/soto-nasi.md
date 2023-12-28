@@ -1,5 +1,5 @@
 ---
-title: "Soto nasi"
+nama: "Soto nasi"
 harga: "10.000"
 gambar:
   src: "./"

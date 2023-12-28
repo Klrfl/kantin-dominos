@@ -1,5 +1,5 @@
 ---
-title: "Minuman lain"
+nama: "Minuman lain"
 harga: "10.000"
 gambar:
   src: "./"

@@ -1,7 +1,7 @@
 import { z, defineCollection } from "astro:content";
 
 const commonSchema = z.object({
-  title: z.string(),
+  nama: z.string(),
   harga: z.string(),
   gambar: z.object({
     src: z.string().optional(),
